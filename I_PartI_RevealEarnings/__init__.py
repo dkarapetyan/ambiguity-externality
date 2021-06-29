@@ -11,7 +11,8 @@ class Constants(BaseConstants):
     name_in_url = 'I_PartI_RevealEarnings'
     players_per_group = None
     num_rounds = 1
-    with open('\bluematch.csv', encoding='utf-8') as file:
+    urlfile = "https://res.cloudinary.com/ddrlwyim9/raw/upload/v1624959401/bluematch_f0h7js.csv"
+    with open(urlfile, encoding='utf-8') as file:
         rows = list(csv.DictReader(file))
 
 
