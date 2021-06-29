@@ -11,8 +11,9 @@ class Constants(BaseConstants):
     name_in_url = 'I_PartI_RevealEarnings'
     players_per_group = None
     num_rounds = 1
-    urlfile = "https://github.com/dkarapetyan/ambiguity-externality/blob/master/I_PartI_RevealEarnings/bluematch.csv"
-    with open(urlfile, encoding='utf-8') as file:
+    FILE_DIR = os.path.dirname(os.path.abspath(__file__))
+    PARENT_DIR = os.path.join(FILE_DIR, os.pardir)
+    with open(os.path.join(PARENT_DIR, 'bluematch.csv'), encoding='utf-8') as file:
         rows = list(csv.DictReader(file))
 
 
