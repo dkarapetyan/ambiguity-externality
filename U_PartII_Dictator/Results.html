@@ -1,0 +1,17 @@
+{{ block title }}
+    Part 2: Third Task Earnings
+{{ endblock }}
+
+{{ block content }}
+
+{{ if session.config.name == "victim" }}
+Your total earnings from the third task is {{ player.participant.dictator_II }}
+{{else}}
+<p>Since you are the blue player, you don’t need to make any decision in this task.</p>
+<p>The yellow player’s allocation decision, along with any adjustments that need to be made to your bonus payment for this task, will be provided to you within 21 days.</p>
+<p><b>You will not immediately know what your total additional bonus payment will be until the yellow player’s decision is made.</b></p>
+{{endif}}
+    {{ next_button }}
+{{ endblock }}
+
+

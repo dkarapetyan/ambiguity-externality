@@ -1,0 +1,55 @@
+{{ block title }}
+    Thank You!
+{{ endblock }}
+
+{{ block content }}
+<p>Thank you for your participation! You have now completed the study, and your bonus payments will be processed within 21 days.</p>
+<p>The computer program has randomly chosen <b>Part {{ player.participant.random_part }}</b> to compute your bonus payments.</p>
+{{ if session.config.name == "victim" }}
+    <p>Your bonus payment for the encryption task is
+        <b>
+            {{ if player.participant.random_part == "I" }}
+            {{ player.participant.payoff_I }}
+            {{ else }}
+            {{ player.participant.payoff_II }}
+            {{ endif }}
+        </b>
+        , and the bonus payment for the decision exercise is
+        <b>
+            {{ if player.participant.random_part == "I" }}
+            {{ player.participant.dictator_I }}
+            {{ else }}
+            {{ player.participant.dictator_II }}
+            {{ endif }}
+        </b>.
+    </p>
+    <p>Your total earnings for today's experiment are
+        <b>
+            {{ participant.payoff }}
+        </b>
+        .
+    </p>
+{{ else }}
+    <p>Your bonus payment for the encryption task is
+        <b>
+            {{ if player.participant.random_part == "I" }}
+            {{ player.participant.payoff_I }}
+            {{ else }}
+            {{ player.participant.payoff_II }}
+            {{ endif }}
+        </b>
+        .
+    <p>Your bonus payment for the decision exercise will depend on the decision the yellow player you were matched with made.</p>
+{{endif}}
+
+
+    <footer>
+        <hr/>
+        <div class="text-right">
+            <p class="text-muted font-italic">Laboratory for Economic and Decision Research, University of East Anglia
+                <img src="{% static 'global/uea.png' %}" class="align-content-center ml-3" alt="UEA logo"/>
+            </p>
+        </div>
+    </footer>
+
+{{ endblock }}

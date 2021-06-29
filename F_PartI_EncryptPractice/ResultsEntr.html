@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    <h4><center><b>Results</b></center></h4>
+    <br>
+    <p>You correctly encoded {{ player.performance_entr }} word(s).</p>
+
+
+    {% next_button %}
+
+
+{% endblock %}

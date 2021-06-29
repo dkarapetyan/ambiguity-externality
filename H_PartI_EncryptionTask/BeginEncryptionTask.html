@@ -1,0 +1,27 @@
+{{ block title }}
+    Part 1: Begin Encryption Task
+{{ endblock }}
+{{ block content }}
+
+{{ if session.config.name == "victim" }}
+    <!-- for yellow players -->
+    <p>
+        You have been randomly assigned to be a <b>yellow player</b>.<br>
+    <br>Your matched counterpart will be a blue player. In Part I, each word the blue player encrypts will take away 1 token from you.<br>
+    <br>Please proceed to the Encryption Task.<br>
+        <br><b>You will not be able to pause the task, so please make sure that you are available for the next 8 minutes without any interruption.<br></b>
+    </p>
+
+{{ else }}
+    <!-- for blue players -->
+    <p>
+        You have now been randomly assigned to be a <b>blue player</b>.<br>
+    <br>Your matched counterpart will be a yellow player. Each word you encode will take away 1 token from the yellow player.<br>
+    <br>Please proceed to the Encryption Task.<br>
+        <br><b>You will not be able to pause the task, so please make sure that you are available for the next 8 minutes without any interruption.<br></b>
+    </p>
+{{ endif }}
+
+<button value="true" name="beginencryptiontask">Begin Encryption Task</button>
+
+{{ endblock }}

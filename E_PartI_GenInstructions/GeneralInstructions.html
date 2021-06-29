@@ -1,0 +1,26 @@
+{{ block title }}
+    Part 1: General Instructions
+{{ endblock }}
+{{ block content }}
+
+<p>
+    In Part I, you are going to be randomly assigned to <b>either be a blue player or yellow player</b>. You will <b>keep the player type</b> you’ve been assigned to in both Part 1 and Part 2 of this study.<br>
+
+<br>A blue player and yellow player will then be randomly and anonymously paired together.<br>
+
+<br>You will participate in {{ if session.config.name == "victim" }}4{{ else }}3{{ endif }} different tasks in Part I.<br>
+
+    <br>First, you will begin an <b>encryption task</b>, where you will <b>encode letters into numbers</b>.  An example will be provided on the next screen.<br>
+
+    {{ if session.config.name == "victim" }}<br>Second, you will complete a <b>short survey</b> about decisions related to the encryption task.<br>{{ endif }}
+
+    <br>{{ if session.config.name == "victim" }}Third{{ else }}Second{{ endif }}, you will participate in <b>one decision exercise</b>. Your participation in this exercise will not be an active one if you are a blue player.<br>
+
+    <br>{{ if session.config.name == "victim" }}Fourth{{ else }}Third{{ endif }}, you will be asked to answer <b>one final survey question</b> before completing Part I.<br>
+
+</p>
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}

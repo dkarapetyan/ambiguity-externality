@@ -1,0 +1,21 @@
+{{ block title }}
+    Part 1: First Task Instructions
+{{ endblock }}
+{{ block content }}
+
+<p>
+    <br>In this task, you will be shown a 5-letter word that you will encode into 5 numbers.  After you finish encoding a word, the computer program will prompt you with another word to encode. Once you encode that word, you will be given another word, and so on.</br>
+    <br>This process will continue for 8 minutes (480 seconds).</br>
+    <br><b>Part of your bonus payment will be determined by your performance in this task</b>.</br>
+    <br><b><u>Roles</u></b>
+    <br>If you are a <b>blue player</b>, each word you encode correctly will <b>take away 1 token</b> from the yellow player you are paired with.</br>
+    <br>If you are a <b>yellow player</b>, your earnings will decrease every time a blue player correctly encodes a word. You will <b>not take away any tokens</b> from the blue player for the words you encode.</br>
+    <br><b><u>Token Earnings</b></u><br>
+    <br>Each correct answer will add 2 tokens to your score, and will be equal to an <b>additional bonus payment</b> of up to £.10 per word encoded with a potential maximum of 64 tokens earned equal to <b>£3.20</b>. Each incorrect answer will not add any tokens to your score.
+
+</p>
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}

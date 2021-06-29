@@ -1,0 +1,21 @@
+{{ block title }}
+    Part 2: General Instructions
+{{ endblock }}
+{{ block content }}
+<p> For Part 2, all participants are randomly <b>re-matched</b> with another player.
+    All participants will <b>keep the player role</b> they were assigned in Part 1.<br>
+
+<br>First, you will begin an <b>encryption task</b>, where you will <b>encode letters into numbers</b>.  An example will be provided on the next screen.<br>
+
+    {{ if session.config.name == "victim" }}<br>Second, you will complete a <b>short survey</b> about decisions related to the encryption task.<br>{{ endif }}
+
+    <br>{{ if session.config.name == "victim" }}Third{{ else }}Second{{ endif }}, you will participate in <b>one decision exercise</b>. Your participation in this exercise will not be an active one if you are a blue player.<br>
+
+    <br>{{ if session.config.name == "victim" }}Fourth{{ else }}Third{{ endif }}, you will be asked to answer <b>one final survey question</b> before completing Part I.<br>
+
+</p>
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}

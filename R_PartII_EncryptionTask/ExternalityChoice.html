@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+    <h4><b>Payoff Choice</b></h4>
+    <br>
+        <p>You will be matched with another yellow player for Part 2.
+
+You will now have the choice to earn your tokens in one of two ways before you begin the encryption task.
+
+Please choose between the following types of token earnings:
+</p>
+    {% formfields %}
+
+    {% next_button %}
+
+
+{% endblock %}
