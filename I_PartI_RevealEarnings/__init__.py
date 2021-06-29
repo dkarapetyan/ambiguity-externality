@@ -11,10 +11,6 @@ class Constants(BaseConstants):
     name_in_url = 'I_PartI_RevealEarnings'
     players_per_group = None
     num_rounds = 1
-    FILE_DIR = os.path.dirname(os.path.abspath(__file__))
-    PARENT_DIR = os.path.join(FILE_DIR, os.pardir)
-    with open(os.path.join(PARENT_DIR, 'bluematch.csv'), encoding='utf-8') as file:
-        rows = list(csv.DictReader(file))
 
 
 class Subsession(BaseSubsession):
@@ -40,7 +36,7 @@ class Hidden(Page):
         #the variable name at the end of the next line might change when we run it properly with a "H_" prefix
         player.participant.externality_I = cu(0)
         if player.session.config['name'] == "victim":
-            player.participant.externality_I = cu(int(Constants.rows[random.randint(0, (len(Constants.rows)-1))]['H_PartI_EncryptionTask.1.player.performance'])*player.session.config['real_world_currency_per_point'])
+            player.participant.externality_I = cu(20*player.session.config['real_world_currency_per_point'])
         player.participant.payoff_I = cu(max((player.participant.tokens_I*player.session.config['real_world_currency_per_point'])-player.participant.externality_I, 0))
 
 
